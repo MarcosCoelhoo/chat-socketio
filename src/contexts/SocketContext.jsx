@@ -7,7 +7,7 @@ export const SocketStorage = ({ children }) => {
   const [socket, setSocket] = React.useState(null);
 
   React.useEffect(() => {
-    const newSocket = io('http://localhost:3333');
+    const newSocket = io('https://server-socketio-markonha.onrender.com');
     setSocket(newSocket);
     return () => {
       newSocket.disconnect();
